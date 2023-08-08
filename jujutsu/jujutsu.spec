@@ -1,6 +1,6 @@
 Name:       jujutsu
 Version:    0.8.0
-Release:    2%{?dist}
+Release:    3%{?dist}
 Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
@@ -32,7 +32,7 @@ functionality, automatic rebase, safe replication via rsync, Dropbox, or
 distributed file system).
 
 %prep
-%autosetup
+%autosetup -n jj-%{version}
 
 # Change default optimizations
 sed -i '/profile.release/d' Cargo.toml
