@@ -1,6 +1,6 @@
 Name:       jujutsu
 Version:    0.8.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
