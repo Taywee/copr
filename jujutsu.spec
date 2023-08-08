@@ -1,6 +1,6 @@
 Name:       jujutsu
 Version:    0.8.0
-Release:    3%{?dist}
+Release:    4%{?dist}
 Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
@@ -40,7 +40,7 @@ sed -i '/strip = "debuginfo"/d' Cargo.toml
 sed -i '/codegen-units = 1/d' Cargo.toml
 
 echo -e '\n[profile.release]' >> Cargo.toml
-echo 'opt-level = "3"' >> Cargo.toml
+echo 'opt-level = 3' >> Cargo.toml
 echo 'strip = true' >> Cargo.toml
 echo 'lto = "thin"' >> Cargo.toml
 echo 'codegen-units = 1' >> Cargo.toml
