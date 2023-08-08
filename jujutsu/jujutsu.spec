@@ -5,7 +5,7 @@ Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
 URL:        https://github.com/martinvonz/jj
-Source0:    %{url}/archive/refs/tags/v{version}.tar.gz
+Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
 %if 0%{?el8} || 0%{?el9}
 %else
