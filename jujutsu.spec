@@ -1,6 +1,6 @@
 Name:       jujutsu
-Version:    0.8.0
-Release:    5%{?dist}
+Version:    0.14.0
+Release:    1%{?dist}
 Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
@@ -42,7 +42,7 @@ sed -i '/codegen-units = 1/d' Cargo.toml
 echo -e '\n[profile.release]' >> Cargo.toml
 echo 'opt-level = 3' >> Cargo.toml
 echo 'strip = true' >> Cargo.toml
-echo 'lto = "thin"' >> Cargo.toml
+echo 'lto = true' >> Cargo.toml
 echo 'codegen-units = 1' >> Cargo.toml
 
 %if 0%{?el8} || 0%{?el9}
@@ -70,5 +70,8 @@ strip --strip-all %{buildroot}%{_bindir}/*
 
 
 %changelog
+* Wed Feb 07 2024 Taylor C. Richberger <taywee@gmx.com> - 0.14.0
+- chore(update): 0.14.0
+
 * Tue Aug 08 2023 Taylor C. Richberger <taywee@gmx.com> - 0.8.0
 - chore(update): 0.8.0
