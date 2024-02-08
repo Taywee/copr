@@ -1,6 +1,6 @@
 Name:       jujutsu
 Version:    0.14.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    A Git-compatible DVCS that is both simple and powerful
 
 License:    MIT
@@ -55,7 +55,7 @@ echo 'codegen-units = 1' >> Cargo.toml
 %if 0%{?el8} || 0%{?el9}
 source "$HOME/.cargo/env"
 %endif
-cargo install --root=%{buildroot}%{_prefix} --path=. --bin jj
+cargo install --locked --root=%{buildroot}%{_prefix} --bin jj jj-cli
 
 
 rm -f %{buildroot}%{_prefix}/.crates.toml \
